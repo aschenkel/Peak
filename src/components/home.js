@@ -31,7 +31,6 @@ class Home extends Component{
                 style={styles.image}/>
             </View>
            
-
         </View>)
     }
 
@@ -68,7 +67,7 @@ class Home extends Component{
         {
             if(res !== undefined){
                 console.log(res);
-                //dispatch actions
+                //this.props.setTweets(tweets)
             }
         });
     }
