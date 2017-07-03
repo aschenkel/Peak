@@ -8,6 +8,7 @@ import {
   StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux'
+import Loader from './loader'
 import * as actions from '../store/actions/index'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
@@ -22,8 +23,9 @@ class Home extends Component{
     }
     render(){
         return (
-        //add loader structure
-           <ParallaxScrollView
+             this.props.imageURL=== '' ?
+                <Loader/>
+            :  <ParallaxScrollView
               windowHeight={windowHeight}
               backgroundSource={{uri:'https://i.imgur.com/ao1nxlD.png'}}
               navBarTitle="Beak"
@@ -44,18 +46,19 @@ class Home extends Component{
             <Text>Hello. I am sorry for raising a dead thread, but I have run into this exact problem, however the fix listed here does not apply (at least I don't think it does).
 
             Here is my situation. The app has had this package installed and working fine for awhile now with only 1 custom iconFont for our company. Recently we have needed to branch out, so I added the FontAwesome font to the project. I followed all of the steps and everything works great if you run from xcode. I also completely removed the package and reinstalled using rnpm but got the same result. I have tried reseting npm cache, deleting node_modules folders and reinstalling everything, killing tempdir, and deleting xcode project derived data. I am out of options. Any help would be greatly appreciated!</Text>
-      </ParallaxScrollView>
+             </ParallaxScrollView>
         )
     }
 
     fetchProfile() {
-        FabricTwitterKit.fetchProfile((error, profile) => 
-        {
-            if(profile !== undefined){
-                console.log(profile)
-                this.props.setProfile(profile)
-            }
-        });
+            FabricTwitterKit.fetchProfile((error, profile) => 
+            {
+                if(profile !== undefined){
+                    console.log(profile)
+                    this.props.setProfile(profile)
+                }
+            })
+        
     }  
     fetchTweetsMock() {
         var tweets = [{text:"Pepito clavo un clavito"},{text:"Palbito clavo un pepito"}]

@@ -33,7 +33,8 @@ const user = (state = initialState, action) => {
         authorized:true,
         authToken: action.authToken,
         authTokenSecret: action.authTokenSecret,
-        error:false
+        error:false,
+        imageURL:""
       }
     case actionTypes.SET_PROFILE:
       return {
