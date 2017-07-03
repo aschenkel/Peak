@@ -1,0 +1,3 @@
+export const LOAD_USER = 'LOAD_USER';
+export const ERROR_USER_LOGIN = 'ERROR_USER_LOGIN';
+export const INIT_COMPLETED = 'INIT_COMPLETED';
