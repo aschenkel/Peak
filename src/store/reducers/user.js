@@ -4,10 +4,13 @@ var initialState = {
     init:false,
     authorized: false,
     userName: '',
+    name: '',
     userID: '',
     authToken: '',
     authTokenSecret: '',
-    error: false
+    error: false,
+    tweets: [],
+    imageURL:null
 }
 
 const user = (state = initialState, action) => {
@@ -22,7 +25,7 @@ const user = (state = initialState, action) => {
         ...state,
         error:true
       }
-    case actionTypes.LOAD_USER:
+    case actionTypes.SET_USER:
       return {
         ...state,
         userName: action.userName,
@@ -31,6 +34,17 @@ const user = (state = initialState, action) => {
         authToken: action.authToken,
         authTokenSecret: action.authTokenSecret,
         error:false
+      }
+    case actionTypes.SET_PROFILE:
+      return {
+        ...state,
+        name: action.name,
+        imageURL: action.imageURL
+      }
+    case actionTypes.SET_TWEETS:
+      return {
+        ...state,
+        tweets: action.tweets
       }
     default:
       return state

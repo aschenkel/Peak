@@ -25,8 +25,8 @@ class LogIn extends Component{
         {
             if(res !== undefined){
                 if(res.userName){
-                    this.props.loadUser(res)
-                    AsyncStorage.setItem('session', JSON.stringify(res)) 
+                    this.props.setUser(res)
+                   // AsyncStorage.setItem('session', JSON.stringify(res)) 
                 }else{
                     this.props.errorLoadingUser(); 
                 }
@@ -49,8 +49,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    loadUser: session => {
-      dispatch(actions.loadUser(session))
+    setUser: session => {
+      dispatch(actions.setUser(session))
     },
     errorLoadingUser: () => {
       dispatch(actions.errorLoadingUser())

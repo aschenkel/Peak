@@ -1,7 +1,7 @@
 import * as actionTypes from './actionTypes'
 
-export const loadUser = (session) => ({
-    type: actionTypes.LOAD_USER,
+export const setUser = (session) => ({
+    type: actionTypes.SET_USER,
     userName: session.userName,
     userID: session.userID,
     authorized:true,
@@ -10,6 +10,16 @@ export const loadUser = (session) => ({
     error:false
 })
 
+export const setProfile = (profile) => ({
+    type: actionTypes.SET_PROFILE,
+    name: profile.name,
+    imageURL: profile.profile_image_url_https
+})
+
+export const setTweets = (tweets) => ({
+    type: actionTypes.SET_TWEETS,
+    tweets: tweets,
+})
 
 export const errorLoadingUser = () => ({
   type: actionTypes.ERROR_USER_LOGIN,

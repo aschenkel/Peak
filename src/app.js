@@ -11,7 +11,7 @@ class App extends Component {
     AsyncStorage.getItem('session')
       .then((session) => {
         if (session) {
-          this.props.loadUser(JSON.parse(session))
+         // this.props.setUser(JSON.parse(session))
         }
       });
     this.props.initCompleted()
@@ -33,8 +33,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    loadUser: session => {
-      dispatch(actions.loadUser(session))
+    setUser: session => {
+      dispatch(actions.setUser(session))
     },
     initCompleted: () => {
       dispatch(actions.initCompleted())
