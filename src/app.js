@@ -11,19 +11,14 @@ class App extends Component {
     AsyncStorage.getItem('session')
       .then((session) => {
         if (session) {
-          console.log("INIT", session)
           this.props.loadUser(JSON.parse(session))
         }
       });
     this.props.initCompleted()
   }
     render() {
-        return !this.props.init ?
-            <Loader/>
-            : this.props.authorized ? 
-                <Home/> 
-                :
-                <LogIn/>;
+        return <Loader/>
+          
     }
 }
 

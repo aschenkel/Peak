@@ -3,10 +3,18 @@ import {
   View,
   Text,
 } from 'react-native';
+import Spinner from 'react-native-spinkit'
 
-//Use cool loader
 const loader = () =>{
-       return <Text>Cargando...</Text>
+  return (
+  <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+    <Spinner  
+          isVisible={true} 
+          type="Bounce"
+          color='#2980c6'
+          size={130}
+      />
+  </View>)
 }
 
 export default loader
