@@ -17,8 +17,12 @@ class App extends Component {
     this.props.initCompleted()
   }
     render() {
-        return <Loader/>
-          
+        return !this.props.init ?
+            <Loader/>
+            : this.props.authorized ? 
+                <Home/> 
+                :
+                <LogIn/>;
     }
 }
 
