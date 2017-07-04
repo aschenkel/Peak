@@ -9,14 +9,21 @@ import {
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import { connect } from 'react-redux'
 import * as actions from '../store/actions/index'
+import { SocialIcon } from 'react-native-elements'
 
 
 class LogIn extends Component{
     render(){
         return (<View style={styles.container}>
                     <Text>{this.props.error}</Text>
-                    <Button title="Sign in with Twitter" 
-                        onPress={()=>this.SignIn()}/>
+                    <SocialIcon
+                        title='Sign in with Twitter'
+                        button
+                        raised
+                        style={{width:200}}
+                        type='twitter'
+                        onPress={()=>this.SignIn()}
+                    />
                 </View>);
     }
 
