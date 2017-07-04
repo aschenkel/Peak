@@ -25,7 +25,7 @@ class Home extends Component{
         return (
              this.props.imageURL=== '' ?
                 <Loader/>
-            :  <ParallaxScrollView
+            : <ParallaxScrollView
               windowHeight={windowHeight}
               backgroundSource={{uri:'https://i.imgur.com/ao1nxlD.png'}}
               navBarTitle="Beak"
@@ -53,8 +53,9 @@ class Home extends Component{
     fetchProfile() {
             FabricTwitterKit.fetchProfile((error, profile) => 
             {
+                console.log("HERE", error)
+                console.log("HERE", profile)
                 if(profile !== undefined){
-                    console.log(profile)
                     this.props.setProfile(profile)
                 }
             })
@@ -65,28 +66,7 @@ class Home extends Component{
         this.props.setTweets(tweets)
     }
     fetchTweets() {
-        /*
-        var myMap = new Map();
-        var valueID = this.props.userID,
-            keyID = "id";
-        myMap.set(keyID, valueID);
-
-        var myMap = []; 
-        myMap.push({
-            key:   "id",
-            value: this.props.userID
-        });
-        */
-        var myMap = {
-            id: this.props.userID
-        }
-        FabricTwitterKit.fetchTweet(myMap,(error, res) => 
-        {
-            if(res !== undefined){
-                console.log(res);
-                //this.props.setTweets(tweets)
-            }
-        });
+       
     }
 }
 
