@@ -13,6 +13,9 @@ import {
 import Loader from './Loader'
 import User from './User/UserCont';
 import { connect } from 'react-redux'
+import {getfixedURL} from '../store/selectors/index'
+import {setProfile} from '../store/actions/index'
+import FabricTwitterKit from 'react-native-fabric-twitterkit'
 
 class Home extends Component{
     componentDidMount() {      

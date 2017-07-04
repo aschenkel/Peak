@@ -46,6 +46,7 @@ const mapStateToProps = (state) => {
         avgGrade: avgGrade(state.user.tweets),
         tweetsGrade: gradeTweets(state.user.tweets)
     }*/
+    return{}
 }
 
 const mapDispatchToProps = dispatch => ({

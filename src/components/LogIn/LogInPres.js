@@ -14,7 +14,7 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
  class LogInPresentation extends Component{
     render(){
             return (<View style={styles.container}>
-                    
+
                         <Image
                             source={require('../../../img/background.jpg')}
                             style={styles.absolute}
