@@ -23,11 +23,7 @@ const {width: windowWidth,windowHeight } = Dimensions.get('window');
 
 
 class Home extends Component{
-    componentDidMount() {
-        this.setState({
-            elError: "nada",
-            elSuccess: "nadita"
-        })        
+    componentDidMount() {      
         this.fetchProfile()
         this.fetchTweets();
     }
@@ -45,12 +41,13 @@ class Home extends Component{
               leftIcon={{name: 'logout', color: 'white', size: 22, type: 'simple-line-icon'}}
               leftIconOnPress={() => this.logout()}
               rightIcon={{name: 'pencil', color: 'white', size: 22, type: 'simple-line-icon'}}
-              rightIconOnPress={() => this.setState({index: (this.state.index + 1 ) % 3})}
+              rightIconOnPress={() => null}
             >
                 <ScrollView>
-                    <Text>{this.state.elSuccess}</Text>
-                    <Text>{this.state.elError}</Text>
-                </ScrollView>
+                    
+                      <Text>Daleeeeeeee</Text>
+                 </ScrollView>
+                    
              </ParallaxScrollView>
         )
     }
@@ -75,6 +72,7 @@ class Home extends Component{
             )
      
     }
+
     fetchProfile() {
             FabricTwitterKit.fetchProfile((error, profile) => 
             {
@@ -85,24 +83,15 @@ class Home extends Component{
         
     }  
     fetchTweets() {
-        var twitter = new Twitter({
-       "consumerKey": config.consumerKey,
-       "consumerSecret": config.consumerSecret,
-       "accessToken": config.accessToken,
-       "accessTokenSecret": config.accessTokenSecret,
-       "callBackUrl": config.callBackUrl
-    });
-    var error = (err, response, body) =>{
-        this.setState({
-                    elError: err  
-        })
-    };
-	var success =  data => {
-        this.setState({
-                    elSuccess: data 
-        })
-    };    
-    twitter.getUserTimeline({ user_id: '881887373335957504', count: '10'}, error, success)
+        var twitter = new Twitter(config);
+        var error = (err, response, body) =>{
+            //show message
+        };
+        var success =  response => {
+            var data = JSON.parse(response)
+            this.props.setTweets(data)
+        };    
+        twitter.getUserTimeline({ user_id: ""+this.props.userID, count: '10',include_rts:'false'}, error, success)
               
     }
 }
