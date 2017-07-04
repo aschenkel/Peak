@@ -16,6 +16,7 @@ import * as actions from '../store/actions/index'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 var Twitter = require('twitter-node-client').Twitter;
+var config = require('../../twitter_config.json');
 
 
 const {width: windowWidth,windowHeight } = Dimensions.get('window');
@@ -24,8 +25,8 @@ const {width: windowWidth,windowHeight } = Dimensions.get('window');
 class Home extends Component{
     componentDidMount() {
         this.setState({
-                    elError: "nada",
-                    elSuccess: "nadita"
+            elError: "nada",
+            elSuccess: "nadita"
         })        
         this.fetchProfile()
         this.fetchTweets();
@@ -83,17 +84,13 @@ class Home extends Component{
             })
         
     }  
-    fetchTweetsMock() {
-        var tweets = [{text:"Pepito clavo un clavito"},{text:"Palbito clavo un pepito"}]
-        this.props.setTweets(tweets)
-    }
     fetchTweets() {
         var twitter = new Twitter({
-       "consumerKey": "XDPJNmNK6jqExgf4atQlCGywc",
-       "consumerSecret": "xDpesmjiZ3vzmX6KNs0km566cbCV9fgLfhGuCuURnBbTv6rcaE",
-       "accessToken": "880961311726858241-wcYPM7R7QbVXMJQd0Hc4gh7hQe8hN27",
-       "accessTokenSecret": "7H0zlwSmx4vBUqIOCVIf2Rqehl6klqRm3ICaXUGQZcuDq",
-       "callBackUrl": "http://placeholder.com"
+       "consumerKey": config.consumerKey,
+       "consumerSecret": config.consumerSecret,
+       "accessToken": config.accessToken,
+       "accessTokenSecret": config.accessTokenSecret,
+       "callBackUrl": config.callBackUrl
     });
     var error = (err, response, body) =>{
         this.setState({
