@@ -1,10 +1,10 @@
 import {AsyncStorage} from 'react-native'
 import React, { Component } from 'react';
-import Loader from './components/loader'
-import Home from './components/home'
-import LogIn from './components/login'
+import Loader from './components/Loader'
+import Home from './components/Home'
+import LogIn from './components/LogIn/LogInCont'
 import { connect } from 'react-redux'
-import * as actions from './store/actions/index'
+import {setUser,initCompleted} from './store/actions/index'
 
 class App extends Component {
   componentDidMount() {
@@ -34,10 +34,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     setUser: session => {
-      dispatch(actions.setUser(session))
+      dispatch(setUser(session))
     },
     initCompleted: () => {
-      dispatch(actions.initCompleted())
+      dispatch(initCompleted())
     }
 })
 

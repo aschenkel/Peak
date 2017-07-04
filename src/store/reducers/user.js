@@ -1,4 +1,5 @@
 import * as actionTypes from '../actions/actionTypes'
+import * as grader from '../../utils/grader'
 
 var initialState = {
     init:false,
@@ -10,7 +11,7 @@ var initialState = {
     authTokenSecret: '',
     error: false,
     tweets: [],
-    imageURL:null
+    imageURL:null,
 }
 
 const user = (state = initialState, action) => {
@@ -56,5 +57,4 @@ const user = (state = initialState, action) => {
       return state
   }
 }
-
 export default user
