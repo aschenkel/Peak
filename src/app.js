@@ -11,7 +11,7 @@ class App extends Component {
     AsyncStorage.getItem('session')
       .then((session) => {
         if (session) {
-         // this.props.setUser(JSON.parse(session))
+          this.props.setUser(JSON.parse(session))
         }
       });
     this.props.initCompleted()

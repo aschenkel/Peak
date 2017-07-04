@@ -47,6 +47,11 @@ const user = (state = initialState, action) => {
         ...state,
         tweets: action.tweets
       }
+    case actionTypes.LOG_OUT:
+      return {
+        ...initialState,
+        init:true
+      }
     default:
       return state
   }

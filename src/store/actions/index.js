@@ -16,6 +16,10 @@ export const setProfile = (profile) => ({
     imageURL: profile.profile_image_url_https
 })
 
+export const logOut = () => ({
+    type: actionTypes.LOG_OUT,
+})
+
 export const setTweets = (tweets) => ({
     type: actionTypes.SET_TWEETS,
     tweets: tweets,

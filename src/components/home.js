@@ -5,7 +5,9 @@ import {
   Text,
   Image,
   Dimensions,
-  StyleSheet
+  StyleSheet,
+  Alert,
+  AsyncStorage
 } from 'react-native';
 import { connect } from 'react-redux'
 import Loader from './loader'
@@ -33,7 +35,7 @@ class Home extends Component{
               userTitle={"@"+this.props.user}
               userImage={this.props.imageURL}
               leftIcon={{name: 'logout', color: 'white', size: 22, type: 'simple-line-icon'}}
-              leftIconOnPress={() => this.setState({index: (this.state.index + 1 ) % 3})}
+              leftIconOnPress={() => this.logout()}
               rightIcon={{name: 'pencil', color: 'white', size: 22, type: 'simple-line-icon'}}
               rightIconOnPress={() => this.setState({index: (this.state.index + 1 ) % 3})}
             >
@@ -50,11 +52,28 @@ class Home extends Component{
         )
     }
 
+
+    logout(){
+        Alert.alert(
+            'Hey!',
+            'Are you sure you want to log out?',
+            [                
+                {text: 'Cancel', style: 'cancel'},
+                {text: 'OK', onPress: () =>    
+                      {
+                        FabricTwitterKit.logOut() //NO FUNCIONA
+                        AsyncStorage.removeItem('session')
+                        this.props.logOut()
+                    }
+                },
+            ],
+            { cancelable: true }
+            )
+     
+    }
     fetchProfile() {
             FabricTwitterKit.fetchProfile((error, profile) => 
             {
-                console.log("HERE", error)
-                console.log("HERE", profile)
                 if(profile !== undefined){
                     this.props.setProfile(profile)
                 }
@@ -100,6 +119,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setTweets: tweets => {
       dispatch(actions.setTweets(tweets))
+    },
+    logOut: () => {
+      dispatch(actions.logOut())
     }
 })
 

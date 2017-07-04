@@ -51,7 +51,7 @@ class LogIn extends Component{
             if(res !== undefined){
                 if(res.userName){
                     this.props.setUser(res)
-                   // AsyncStorage.setItem('session', JSON.stringify(res)) 
+                    AsyncStorage.setItem('session', JSON.stringify(res)) 
                 }else{
                     this.props.errorLoadingUser(); 
                 }
