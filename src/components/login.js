@@ -56,7 +56,6 @@ class LogIn extends Component{
                     this.props.errorLoadingUser(); 
                 }
             }
-            
         });
     }   
 }

@@ -7,21 +7,28 @@ import {
   Dimensions,
   StyleSheet,
   Alert,
-  AsyncStorage
+  AsyncStorage,
+  ScrollView
 } from 'react-native';
 import { connect } from 'react-redux'
 import Loader from './loader'
 import * as actions from '../store/actions/index'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
+var Twitter = require('twitter-node-client').Twitter;
+
 
 const {width: windowWidth,windowHeight } = Dimensions.get('window');
 
 
 class Home extends Component{
     componentDidMount() {
+        this.setState({
+                    elError: "nada",
+                    elSuccess: "nadita"
+        })        
         this.fetchProfile()
-        this.fetchTweetsMock();
+        this.fetchTweets();
     }
     render(){
         return (
@@ -39,15 +46,10 @@ class Home extends Component{
               rightIcon={{name: 'pencil', color: 'white', size: 22, type: 'simple-line-icon'}}
               rightIconOnPress={() => this.setState({index: (this.state.index + 1 ) % 3})}
             >
-              <Text>Hello. I am sorry for raising a dead thread, but I have run into this exact problem, however the fix listed here does not apply (at least I don't think it does).
-
-            Here is my situation. The app has had this package installed and working fine for awhile now with only 1 custom iconFont for our company. Recently we have needed to branch out, so I added the FontAwesome font to the project. I followed all of the steps and everything works great if you run from xcode. I also completely removed the package and reinstalled using rnpm but got the same result. I have tried reseting npm cache, deleting node_modules folders and reinstalling everything, killing tempdir, and deleting xcode project derived data. I am out of options. Any help would be greatly appreciated!</Text>
-            <Text>Hello. I am sorry for raising a dead thread, but I have run into this exact problem, however the fix listed here does not apply (at least I don't think it does).
-
-            Here is my situation. The app has had this package installed and working fine for awhile now with only 1 custom iconFont for our company. Recently we have needed to branch out, so I added the FontAwesome font to the project. I followed all of the steps and everything works great if you run from xcode. I also completely removed the package and reinstalled using rnpm but got the same result. I have tried reseting npm cache, deleting node_modules folders and reinstalling everything, killing tempdir, and deleting xcode project derived data. I am out of options. Any help would be greatly appreciated!</Text>
-            <Text>Hello. I am sorry for raising a dead thread, but I have run into this exact problem, however the fix listed here does not apply (at least I don't think it does).
-
-            Here is my situation. The app has had this package installed and working fine for awhile now with only 1 custom iconFont for our company. Recently we have needed to branch out, so I added the FontAwesome font to the project. I followed all of the steps and everything works great if you run from xcode. I also completely removed the package and reinstalled using rnpm but got the same result. I have tried reseting npm cache, deleting node_modules folders and reinstalling everything, killing tempdir, and deleting xcode project derived data. I am out of options. Any help would be greatly appreciated!</Text>
+                <ScrollView>
+                    <Text>{this.state.elSuccess}</Text>
+                    <Text>{this.state.elError}</Text>
+                </ScrollView>
              </ParallaxScrollView>
         )
     }
@@ -61,7 +63,8 @@ class Home extends Component{
                 {text: 'Cancel', style: 'cancel'},
                 {text: 'OK', onPress: () =>    
                       {
-                        FabricTwitterKit.logOut() //NO FUNCIONA
+                        FabricTwitterKit.logOut()
+                        //NO FUNCIONA CORRECTAMENTE PONER ISSUE
                         AsyncStorage.removeItem('session')
                         this.props.logOut()
                     }
@@ -85,7 +88,25 @@ class Home extends Component{
         this.props.setTweets(tweets)
     }
     fetchTweets() {
-       
+        var twitter = new Twitter({
+       "consumerKey": "XDPJNmNK6jqExgf4atQlCGywc",
+       "consumerSecret": "xDpesmjiZ3vzmX6KNs0km566cbCV9fgLfhGuCuURnBbTv6rcaE",
+       "accessToken": "880961311726858241-wcYPM7R7QbVXMJQd0Hc4gh7hQe8hN27",
+       "accessTokenSecret": "7H0zlwSmx4vBUqIOCVIf2Rqehl6klqRm3ICaXUGQZcuDq",
+       "callBackUrl": "http://placeholder.com"
+    });
+    var error = (err, response, body) =>{
+        this.setState({
+                    elError: err  
+        })
+    };
+	var success =  data => {
+        this.setState({
+                    elSuccess: data 
+        })
+    };    
+    twitter.getUserTimeline({ user_id: '881887373335957504', count: '10'}, error, success)
+              
     }
 }
 
