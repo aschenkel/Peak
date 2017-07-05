@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import {
   View,
@@ -5,7 +6,7 @@ import {
 } from 'react-native';
 import Spinner from 'react-native-spinkit'
 
-const loader = () =>{
+const Loader = () =>{
   return (
     //USE FADE IN ANIM
   <View style={{backgroundColor:"black" ,flex:1, justifyContent:'center',alignItems:'center'}}>
@@ -18,4 +19,4 @@ const loader = () =>{
   </View>)
 }
 
-export default loader
+export default Loader

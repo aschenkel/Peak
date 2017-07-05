@@ -1,9 +1,7 @@
 import TextStatistics from 'text-statistics'
 
 export const grade = (text) => {
-    var grade = new TextStatistics(text)
-                      .smogIndex()
-
+    var grade = new TextStatistics(text).smogIndex()
     return Math.round(grade)
   }
 

@@ -10,22 +10,28 @@ import {
   ScrollView
 } from 'react-native';
 import { connect } from 'react-redux'
-import  {setTweets} from '../store/actions/index'
+import  {setTweets,fetchTweets} from '../store/actions/index'
 var Twitter = require('twitter-node-client').Twitter;
 var config = require('../../twitter_config.json');
+import Loader from './Loaders/Loader'
 import {avgGrade,gradeTweets} from '../store/selectors/index'
-
-const {width: windowWidth,windowHeight } = Dimensions.get('window');
 
 
 class TimeLine extends Component{
+    constructor(props){
+        super()
+    }
+
     componentDidMount() {      
         this.fetchTweets();
     }
     render(){
         return (
-            <Text>{this.props.avgGrade}</Text>
-        )
+                this.props.tweetsReady ? 
+                    <Text>{""+this.props.tweets[0].text}}</Text>
+                    :
+                    <Loader/>
+            )
     }
     fetchTweets() {
         var twitter = new Twitter(config);
@@ -37,15 +43,17 @@ class TimeLine extends Component{
             this.props.setTweets(data)
         };    
         twitter.getUserTimeline({ user_id: ""+this.props.userID, count: '10',include_rts:'false'}, error, success)
-              
+        
     }
 }
 
 const mapStateToProps = (state) => {
-   /* return{
+     return{
+        tweets: state.user.tweets,
         avgGrade: avgGrade(state.user.tweets),
-        tweetsGrade: gradeTweets(state.user.tweets)
-    }*/
+        tweetsGrade: gradeTweets(state.user.tweets),
+        tweetsReady: state.user.tweetsReady
+    }
     return{}
 }
 
@@ -54,8 +62,6 @@ const mapDispatchToProps = dispatch => ({
       dispatch(setTweets(tweets))
     }
 })
-
-
 
 TimeLine = connect(mapStateToProps,mapDispatchToProps)(TimeLine)
 export default TimeLine

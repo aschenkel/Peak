@@ -10,7 +10,7 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import Loader from './Loader'
+import Loader from './Loaders/Loader'
 import User from './User/UserCont';
 import { connect } from 'react-redux'
 import {getfixedURL} from '../store/selectors/index'

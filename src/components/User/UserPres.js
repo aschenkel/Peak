@@ -12,6 +12,7 @@ import {
 import TimeLine from '../TimeLine'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
+import Loader from '../Loaders/Loader'
 
 const {width: windowWidth,windowHeight } = Dimensions.get('window');
 
@@ -33,8 +34,11 @@ class UserPresentation extends Component{
               rightIconOnPress={() => null}
             >
                 <ScrollView>
-                      <TimeLine/>
-                 </ScrollView>
+                        {this.props.tweets.lenght === 0 ? 
+                            <Loader/>
+                            :
+                            <TimeLine/> }
+                </ScrollView>
              </ParallaxScrollView>
         )
     }
