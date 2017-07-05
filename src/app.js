@@ -2,7 +2,7 @@ import {AsyncStorage} from 'react-native'
 import React, { Component } from 'react';
 import Loader from './components/Loaders/Loader'
 import Home from './components/Home'
-import LogIn from './components/LogIn/LogInCont'
+import LogIn from './components/LogIn/LogIn'
 import { connect } from 'react-redux'
 import {setUser,initCompleted} from './store/actions/index'
 

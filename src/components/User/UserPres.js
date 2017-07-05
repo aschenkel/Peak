@@ -9,7 +9,7 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import TimeLine from '../TimeLine/TimeLineCont'
+import UserData from '../UserData/UserData'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 import Loader from '../Loaders/Loader'
@@ -23,20 +23,21 @@ class UserPresentation extends Component{
         return (
              <ParallaxScrollView
               windowHeight={windowHeight}
-              backgroundSource={{uri:'https://i.imgur.com/ao1nxlD.png'}}
+              backgroundSource={{uri:'https://pbs.twimg.com/media/CaQM3waVAAAoLz6.jpg'}}
               navBarTitle="Beak"
+              navBarColor="black"
               userName={this.props.name}
               userTitle={"@"+this.props.user}
               userImage={this.props.imageURL}
               leftIcon={{name: 'logout', color: 'white', size: 22, type: 'simple-line-icon'}}
               leftIconOnPress={() => this.showConfirmationMessage()}
-              rightIcon={{name: 'pencil', color: 'white', size: 22, type: 'simple-line-icon'}}
-              rightIconOnPress={() => null}
+              rightIcon={{name: 'magnifier', color: 'white', size: 22, type: 'simple-line-icon'}}
+              rightIconOnPress={() => this.showSearch()}
             >
                 <ScrollView>
                     {
                         this.props.tweetsReady ? 
-                            <TimeLine/> 
+                            <UserData/> 
                             :
                             <Loader/>
                     }
@@ -60,6 +61,14 @@ class UserPresentation extends Component{
                     }
                 },
             ],
+            { cancelable: true }
+            )
+     
+    }
+    showSearch(){
+        Alert.alert(
+            'Sorry!',
+            'Search not implemented yet',
             { cancelable: true }
             )
      

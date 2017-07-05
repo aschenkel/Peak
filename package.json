@@ -29,6 +29,7 @@
     "react-native-os": "^1.1.0",
     "react-native-parallax-scrollview": "^1.0.5",
     "react-native-randombytes": "^2.2.0",
+    "react-native-scrollable-tab-view": "^0.6.7",
     "react-native-spinkit": "^1.0.3",
     "react-native-tcp": "^2.0.4",
     "react-native-udp": "^1.2.9",

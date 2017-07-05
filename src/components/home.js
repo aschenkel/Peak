@@ -11,7 +11,7 @@ import {
   ScrollView
 } from 'react-native';
 import Loader from './Loaders/Loader'
-import User from './User/UserCont';
+import User from './User/User';
 import { connect } from 'react-redux'
 import {getfixedURL} from '../store/selectors/image'
 import {setProfile,setTweets} from '../store/actions/index'
