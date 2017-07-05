@@ -8,7 +8,7 @@ import Spinner from 'react-native-spinkit'
 
 const Loader = () =>{
   return (
-    //USE FADE IN ANIM
+    //CHANGE TO CONTENT LOADER
   <View style={{backgroundColor:"white" ,flex:1, justifyContent:'center',alignItems:'center'}}>
     <Spinner  
           isVisible={true} 

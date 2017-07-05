@@ -9,7 +9,7 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import UserData from './UserData'
+import UserData from './UserDataPres'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 import Loader from '../Loaders/Loader'

@@ -5,7 +5,7 @@ import {
   StyleSheet,
   FlatList
 } from 'react-native';
-import TwitCard from './TwitCard';
+import TwitCard from '../TwitCard';
 class TimeLinePres extends Component{
 
     render(){
@@ -27,7 +27,9 @@ class TimeLinePres extends Component{
         <TwitCard 
             id={item.id}
             text={item.text}
-            grade={this.props.tweetsGrade[index]}
+            grade={this.props.grades[index]}
+            favCount={item.favorite_count}
+            created_at={item.created_at}
         />
   );
 

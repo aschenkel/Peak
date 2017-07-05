@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
         user: state.user.userName,
         name: state.user.name,
         imageURL: getfixedURL(state.user.imageURL),
-        tweetsReady: state.user.tweetsReady
+        tweetsReady: state.tweets.tweetsReady
     }
 }
 

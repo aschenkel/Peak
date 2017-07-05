@@ -35,20 +35,13 @@ const user = (state = initialState, action) => {
         authToken: action.authToken,
         authTokenSecret: action.authTokenSecret,
         error:false,
-        imageURL:"",
-        tweetsReady:false
-     }
+        imageURL:""
+    }
     case actionTypes.SET_PROFILE:
       return {
         ...state,
         name: action.name,
         imageURL: action.imageURL
-      }
-    case actionTypes.SET_TWEETS:
-      return {
-        ...state,
-        tweets: action.tweets,
-        tweetsReady:true
       }
     case actionTypes.LOG_OUT:
       return {

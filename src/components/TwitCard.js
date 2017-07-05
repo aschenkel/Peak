@@ -9,8 +9,10 @@ const TwitCard = (props)=>{
         return (
                 <Card>
                     <CardContent>
-                        <Text>{props.text}</Text>
-                        <Text>{props.grade} grade</Text>
+                        <Text style={{fontWeight:'bold'}}>{props.text}</Text>
+                        <Text>{props.favCount}</Text>
+                        <Text>{props.retweetCount}</Text>
+                        <Text style={{fontWeight:'bold',color:"grey"}}>{props.grade} grade</Text>
                     </CardContent>
                 </Card>               
         )

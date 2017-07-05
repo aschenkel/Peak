@@ -1,12 +1,10 @@
 import { connect } from 'react-redux'
-import {gradeTweets} from '../../store/selectors/grade'
 import TimeLinePres from './TimeLinePres'
 
 const mapStateToProps = (state) => {
-     var gradeResults = gradeTweets(state.user.tweets)
       return {
-          tweets: state.user.tweets,
-          tweetsGrade: gradeResults.tweetsGrade
+          tweets: state.tweets.tweets,
+          grades: state.tweets.grades
       }
 }
 
