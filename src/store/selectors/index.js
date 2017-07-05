@@ -1,25 +1,22 @@
-export const avgGrade= (tweets)=> {
-    if(tweets.lenght > 0)
-        return (gradeTweets().reduce((sum, element) => sum + element)) /tweets.lenght;
-    else
-        return -1
-}
+import * as grader from '../../utils/grader'
 
+export const avgGrade= (state)=> {
+       var sum =0
+       gradeTweets(state).forEach(grade => 
+               sum += grade
+       );
+       return sum /state.user.tweets.length
+}
 export const getfixedURL= (imageURL)=> {
-  return ""+imageURL.replace("normal","400x400")
+         return ""+imageURL.replace("normal","400x400")
 }
 
-export const gradeTweets= (tweets)=> {
-     if(tweets.lenght > 0){
-        return tweets.map(tweet =>
-            {
-            return gradeTweet(tweet.text)
-        })
-     }else{
-         return tweets
-     }
+export const gradeTweets= (state)=> {
+        return state.user.tweets.map(tweet => 
+             gradeTweet(tweet.text)
+        )
 }
 
 export const gradeTweet= (text)=> {
-    return grader.grade(tweet.text)  
+        return grader.grade(text)  
 }

@@ -9,7 +9,7 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import TimeLine from '../TimeLine'
+import TimeLine from '../TimeLine/TimeLineCont'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 import Loader from '../Loaders/Loader'
@@ -34,10 +34,12 @@ class UserPresentation extends Component{
               rightIconOnPress={() => null}
             >
                 <ScrollView>
-                        {this.props.tweets.lenght === 0 ? 
-                            <Loader/>
+                    {
+                        this.props.tweetsReady ? 
+                            <TimeLine/> 
                             :
-                            <TimeLine/> }
+                            <Loader/>
+                    }
                 </ScrollView>
              </ParallaxScrollView>
         )

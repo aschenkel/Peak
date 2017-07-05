@@ -6,10 +6,9 @@ import UserPresentation from './UserPres'
 const mapStateToProps = (state) => {
     return{
         user: state.user.userName,
-        userID: state.user.userID,
         name: state.user.name,
-        tweets: state.user.tweets,
-        imageURL: getfixedURL(state.user.imageURL)
+        imageURL: getfixedURL(state.user.imageURL),
+        tweetsReady: state.user.tweetsReady
     }
 }
 

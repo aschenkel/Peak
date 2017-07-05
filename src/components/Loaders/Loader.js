@@ -9,7 +9,7 @@ import Spinner from 'react-native-spinkit'
 const Loader = () =>{
   return (
     //USE FADE IN ANIM
-  <View style={{backgroundColor:"black" ,flex:1, justifyContent:'center',alignItems:'center'}}>
+  <View style={{backgroundColor:"white" ,flex:1, justifyContent:'center',alignItems:'center'}}>
     <Spinner  
           isVisible={true} 
           type="Bounce"
