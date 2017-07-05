@@ -7,9 +7,10 @@ import Stats from '../Stats/Stats'
 const UserDataPres = () =>{
          return(
                  <TabView tabBarTextStyle={{fontWeight:'bold'}} tabBarBackgroundColor = "white"renderTabBar={() => <DefaultTabBar />}>
+                    <Stats tabLabel='Stats'/>
                     <Timeline tabLabel='Timeline'/>
                  </TabView>
-            )
-    }
+        )
+}
 
 export default UserDataPres
