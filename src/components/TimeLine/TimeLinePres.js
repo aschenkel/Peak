@@ -3,18 +3,32 @@ import {
   View,
   Text,
   StyleSheet,
+  FlatList
 } from 'react-native';
-
+import TwitCard from './TwitCard';
 class TimeLinePres extends Component{
 
     render(){
         return (
             <View>
-                 <Text>{this.props.tweets[0].text}</Text>
+                 <FlatList
+                    data={this.props.tweets}
+                    keyExtractor={this._keyExtractor}
+                    renderItem={this._renderItem}
+                />    
             </View>   
                
             )
     }
+    _keyExtractor = (item, index) => item.id;
+
+    _renderItem = ({item,index}) => (
+        <TwitCard 
+            id={item.id}
+            text={item.text}
+            grade={this.props.tweetsGrade[index]}
+        />
+  );
 
 }
 
