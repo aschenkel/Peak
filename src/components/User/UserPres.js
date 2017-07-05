@@ -4,7 +4,6 @@ import {
   Text,
   Image,
   Dimensions,
-  StyleSheet,
   Alert,
   AsyncStorage,
   ScrollView
@@ -33,7 +32,7 @@ class UserPresentation extends Component{
               rightIcon={{name: 'magnifier', color: 'white', size: 22, type: 'simple-line-icon'}}
               rightIconOnPress={() => this.showSearch()}
             >
-                <ScrollView>
+                <ScrollView style={{backgroundColor:"white"}}>
                     {
                         this.props.tweetsReady ? 
                             <UserData/> 
@@ -74,18 +73,5 @@ class UserPresentation extends Component{
     }
 }
 
-const styles = StyleSheet.create({
-  imageContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    width: 100,
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
 
 export default UserPresentation

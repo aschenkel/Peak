@@ -28,6 +28,7 @@ class TimeLinePres extends Component{
             id={item.id}
             text={item.text}
             grade={this.props.grades[index]}
+            retweetCount={item.retweet_count}
             favCount={item.favorite_count}
             created_at={item.created_at}
         />
