@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
 } from 'react-native';
 
-class TimeLinePres extends Component{
+class StatsPres extends Component{
 
     render(){
         return (
             <View>
-                 <Text>{this.props.tweets[0].text}</Text>
+                 <Text>{this.props.avgGrade}</Text>
             </View>   
                
             )
@@ -18,4 +17,4 @@ class TimeLinePres extends Component{
 
 }
 
-export default TimeLinePres
+export default StatsPres

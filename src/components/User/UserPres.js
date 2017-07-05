@@ -9,13 +9,12 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import UserData from '../UserData/UserData'
+import UserData from './UserData'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 import Loader from '../Loaders/Loader'
 
 const {width: windowWidth,windowHeight } = Dimensions.get('window');
-
 
 class UserPresentation extends Component{
     
