@@ -12,6 +12,7 @@ class TimeLinePres extends Component{
         return (
             <View>
                  <FlatList
+                    scrollEnabled={ false }
                     data={this.props.tweets}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
