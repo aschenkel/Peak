@@ -13,7 +13,7 @@ import {
 import Loader from './Loaders/Loader'
 import User from './User/UserCont';
 import { connect } from 'react-redux'
-import {getfixedURL} from '../store/selectors/index'
+import {getfixedURL} from '../store/selectors/image'
 import {setProfile,setTweets} from '../store/actions/index'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 var Twitter = require('twitter-node-client').Twitter;

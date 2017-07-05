@@ -14,14 +14,15 @@ import  {setTweets,fetchTweets} from '../../store/actions/index'
 var Twitter = require('twitter-node-client').Twitter;
 var config = require('../../../twitter_config.json');
 import Loader from '../Loaders/Loader'
-import {avgGrade,gradeTweets} from '../../store/selectors/index'
+import {gradeTweets} from '../../store/selectors/grade'
 import TimeLinePresentation from './TimeLinePres'
 
 const mapStateToProps = (state) => {
-      return{
+     var gradeResults = gradeTweets(state.user.tweets)
+      return {
           tweets: state.user.tweets,
-          avgGrade: avgGrade(state),
-          tweetsGrade: gradeTweets(state)
+          tweetsGrade: gradeResults.tweetsGrade,
+          avgGrade: gradeResults.avgGrade
       }
 }
 

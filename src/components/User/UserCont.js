@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import {logOut} from '../../store/actions/index'
-import {getfixedURL} from '../../store/selectors/index'
+import {getfixedURL} from '../../store/selectors/image'
 import UserPresentation from './UserPres'
 
 const mapStateToProps = (state) => {
