@@ -3,18 +3,20 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  Dimensions,
+  StyleSheet
 } from 'react-native';
 import Spinner from 'react-native-spinkit'
+const {windowHeight } = Dimensions.get('window');
 
-const Loader = () =>{
+const Loader = (props) =>{
   return (
-    //CHANGE TO CONTENT LOADER
-  <View style={{backgroundColor:"white" ,flex:1, justifyContent:'center',alignItems:'center'}}>
-    <Spinner  
+  <View style={{backgroundColor:props.backColor, flex:1,height:windowHeight, justifyContent:'center',alignItems:'center'}}>
+    <Spinner
           isVisible={true} 
-          type="Bounce"
-          color='#2980c6'
-          size={130}
+          type={props.type}
+          color={props.color}
+          size={props.loaderSize}
       />
   </View>)
 }

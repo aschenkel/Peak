@@ -37,7 +37,7 @@ class UserPresentation extends Component{
                         this.props.tweetsReady ? 
                             <TweetsData/> 
                             :
-                            <Loader/>
+                            <Loader color="white" type="Pulse" loaderSize={300} backColor="#FAFAFA"/>
                     }
                 </ScrollView>
              </ParallaxScrollView>

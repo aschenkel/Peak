@@ -27,7 +27,7 @@ class Home extends Component{
 
     render(){
         return (
-            this.props.imageURL=== '' ? <Loader/> : <User/>
+            this.props.imageURL=== '' ? <Loader color="white" loaderSize={140} backColor="#2980c6" type="Bounce"/> : <User/>
         )
     }
 
