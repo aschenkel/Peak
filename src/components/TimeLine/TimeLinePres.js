@@ -5,7 +5,7 @@ import {
   StyleSheet,
   FlatList
 } from 'react-native';
-import TwitCard from '../TwitCard';
+import TwitCard from '../Cards/TwitCard';
 class TimeLinePres extends Component{
 
     render(){

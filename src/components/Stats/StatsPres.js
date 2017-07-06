@@ -5,14 +5,16 @@ import {
   StyleSheet,
   FlatList
 } from 'react-native';
-import TwitCard from '../TwitCard';
+import TwitCard from '../Cards/TwitCard';
+import AverageCard from '../Cards/AverageCard';
+
 class TimeLinePres extends Component{
 
     render(){
         return (
             <View>
-                <Text>{this.props.avgGrade}</Text>
-                 <FlatList
+                <AverageCard avgGrade={this.props.avgGrade}/>
+                <FlatList
                     scrollEnabled={ false }
                     data={this.props.topTweets.tweets}
                     keyExtractor={this._keyExtractor}

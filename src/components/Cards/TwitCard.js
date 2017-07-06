@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import { Card, CardTitle, CardContent} from 'react-native-card-view';
+import { Card} from 'react-native-card-view';
 import { Icon } from 'react-native-elements'
 
 const TwitCard = (props)=>{
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         color:'grey'
     },
     gradeContainer:{
-        marginLeft:110
+        marginLeft:95
     }
 });
 
