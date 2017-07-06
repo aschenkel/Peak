@@ -3,7 +3,7 @@ export const avg = grades => {
        grades.forEach(grade => 
                sum += grade
        );
-       return sum /grades.length
+       return Math.round(sum /grades.length)
 }
 
 export const getTopTweets = tweets => {

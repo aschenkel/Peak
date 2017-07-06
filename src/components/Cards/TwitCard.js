@@ -6,22 +6,10 @@ import {
 } from 'react-native';
 import { Card} from 'react-native-card-view';
 import { Icon } from 'react-native-elements'
+import GradeSufix from './GradeSuffix'
 
 const TwitCard = (props)=>{
-    var gradeSuffix ="th"
-    switch (props.grade) {
-        case 1:
-            gradeSuffix = "st"
-            break;
-        case 2:
-            gradeSuffix = "nd"
-        break;
-        case 3:
-            gradeSuffix = "rd"
-        break;
-        default:
-            break;
-    }
+    
         return (
                 <Card>
                     <View style={styles.cardContainer}>
@@ -71,8 +59,8 @@ const TwitCard = (props)=>{
                                  <Text style={styles.favsNretweetsContainer}>{props.retweetCount}</Text>
                             </View>
                             <View style={styles.gradeContainer}>
-                                 <Text style={{fontWeight:'bold',color:"gold",fontSize:20}}>
-                                     {props.grade + gradeSuffix} grade
+                                 <Text style={styles.gradeText}>
+                                     {props.grade}{<GradeSufix grade={props.grade} customsStyle={styles.gradeText}/>} grade
                                 </Text>
                             </View>
                             
@@ -133,6 +121,11 @@ const styles = StyleSheet.create({
     },
     gradeContainer:{
         marginLeft:95
+    },
+    gradeText:{
+        fontWeight:'bold',
+        color:"gold",
+        fontSize:20
     }
 });
 

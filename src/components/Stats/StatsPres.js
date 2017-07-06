@@ -6,14 +6,14 @@ import {
   FlatList
 } from 'react-native';
 import TwitCard from '../Cards/TwitCard';
-import AverageCard from '../Cards/AverageCard';
+import AverageGrade from '../Cards/AverageGrade';
 
 class TimeLinePres extends Component{
 
     render(){
         return (
             <View>
-                <AverageCard avgGrade={this.props.avgGrade}/>
+                <AverageGrade avgGrade={this.props.avgGrade}/>
                 <FlatList
                     scrollEnabled={ false }
                     data={this.props.topTweets.tweets}
