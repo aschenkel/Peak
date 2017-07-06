@@ -4,17 +4,15 @@ import {
   Text,
   Button,
   StyleSheet,
-  AsyncStorage,
   Image
 } from 'react-native';
 import { SocialIcon } from 'react-native-elements'
 import { BlurView, VibrancyView } from 'react-native-blur';
-import FabricTwitterKit from 'react-native-fabric-twitterkit'
 
  class LogInPresentation extends Component{
     render(){
-            return (<View style={styles.container}>
-
+            return (
+                <View style={styles.container}>
                         <Image
                             source={require('../../../img/background.jpg')}
                             style={styles.absolute}
@@ -36,26 +34,11 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
                                     fontSize
                                     style={{width:200}}
                                     type='twitter'
-                                    onPress={()=>this.SignIn()}
-                        />
+                                    onPress={()=>this.props.signIn()}
+                                />
                         </View>
-                    </View>);
+                </View>);
         }
-
-    //THIS WILL BE MOVED TO MIDDLEWARE
-     SignIn(){
-        FabricTwitterKit.login((error, res) => 
-        {
-            if(res !== undefined){
-                if(res.userName){
-                    this.props.setUser(res)
-                    AsyncStorage.setItem('session', JSON.stringify(res)) 
-                }else{
-                    this.props.errorLoadingUser(); 
-                }
-            }
-        });
-    }   
 
 
 }

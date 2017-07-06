@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'
 import reducers from './store/reducers/index'
 import App from './app'
-import devToolsEnhancer from 'remote-redux-devtools';
+import { composeWithDevTools } from 'remote-redux-devtools';
 
-const store = createStore(reducers,devToolsEnhancer())
+
+const store = createStore(reducers,composeWithDevTools(
+  applyMiddleware(thunk)))
 
 const Beak = ()=>
 (

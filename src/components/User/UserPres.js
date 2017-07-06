@@ -22,7 +22,7 @@ class UserPresentation extends Component{
              <ParallaxScrollView
               windowHeight={windowHeight}
               backgroundSource={require('../../../img/twitterColor.jpg')}
-              navBarTitle="Beak"
+              navBarTitle="Peak"
               navBarColor="black"
               userName={this.props.name}
               userTitle={"@"+this.props.user}
@@ -51,10 +51,7 @@ class UserPresentation extends Component{
             [                
                 {text: 'Cancel', style: 'cancel'},
                 {text: 'OK', onPress: () =>    
-                      {
-                        //DO IT ON MIDDLEWARE
-                        FabricTwitterKit.logOut() //Doesnt work. Issue: https://github.com/tkporter/react-native-fabric-twitterkit/issues/33
-                        AsyncStorage.removeItem('session')
+                    {
                         this.props.logOut()
                     }
                 },
@@ -71,7 +68,6 @@ class UserPresentation extends Component{
                 cancelable: true
             }
             )
-     
     }
 }
 

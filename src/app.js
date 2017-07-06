@@ -4,18 +4,13 @@ import Loader from './components/Loaders/Loader'
 import Home from './components/Home'
 import LogIn from './components/LogIn/LogIn'
 import { connect } from 'react-redux'
-import {setUser,initCompleted} from './store/actions/index'
+import {loadUser} from './store/actions/index'
 
 class App extends Component {
-  componentDidMount() {
-    AsyncStorage.getItem('session')
-      .then((session) => {
-        if (session) {
-          this.props.setUser(JSON.parse(session))
-        }
-      });
-    this.props.initCompleted()
-  }
+    componentDidMount() {
+      this.props.loadUser()
+    }
+
     render() {
         return !this.props.init ?
             <Loader/>
@@ -33,11 +28,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setUser: session => {
-      dispatch(setUser(session))
-    },
-    initCompleted: () => {
-      dispatch(initCompleted())
+    loadUser: () => {
+      dispatch(loadUser())
     }
 })
 

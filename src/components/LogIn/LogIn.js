@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import {setUser,errorLoadingUser} from '../../store/actions/index'
+import {signIn} from '../../store/actions/index'
 import LogInPresentation from './LogInPres'
 
 
@@ -9,13 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     signIn: () =>{
-        SignIn() //dispatch action, do sign in on middleware and call the ones below
-    },
-    setUser: session => {
-      dispatch(setUser(session))
-    },
-    errorLoadingUser: () => {
-      dispatch(errorLoadingUser())
+        dispatch(signIn()) 
     }
 })
 

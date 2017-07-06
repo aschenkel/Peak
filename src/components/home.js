@@ -1,55 +1,28 @@
 
 import React, { Component } from 'react';
 import {
-  View,
-  Text,
-  Image,
-  Dimensions,
-  StyleSheet,
-  Alert,
-  AsyncStorage,
-  ScrollView
+  StyleSheet
 } from 'react-native';
 import Loader from './Loaders/Loader'
 import User from './User/User';
 import { connect } from 'react-redux'
 import {getfixedURL} from '../store/selectors/image'
-import {setProfile,setTweets} from '../store/actions/index'
-import FabricTwitterKit from 'react-native-fabric-twitterkit'
-var Twitter = require('twitter-node-client').Twitter;
-var config = require('../../twitter_config.json');
+import {fetchProfile,fetchTweets} from '../store/actions/index'
+
 
 class Home extends Component{
     componentDidMount() {      
-        this.fetchProfile()
-        this.fetchTweets();
+        this.props.fetchProfile()
+        this.props.fetchTweets();
     }
 
     render(){
         return (
-            this.props.imageURL=== '' ? <Loader color="white" loaderSize={140} backColor="#2980c6" type="Bounce"/> : <User/>
+            this.props.imageURL=== '' ? 
+                <Loader color="white" loaderSize={140} backColor="#2980c6" type="Bounce"/> 
+            : 
+                <User/>
         )
-    }
-
-    fetchProfile() {
-            FabricTwitterKit.fetchProfile((error, profile) => 
-            {
-                if(profile !== undefined){
-                    this.props.setProfile(profile)
-                }
-            })
-    }
-    fetchTweets() {
-        var twitter = new Twitter(config);
-        var error = (err, response, body) =>{
-            //show message
-        };
-        var success =  response => {
-            var data = JSON.parse(response)
-            this.props.setTweets(data)
-        };    
-        twitter.getUserTimeline({ user_id: ""+this.props.userID, count: '30',include_rts:'false'}, error, success)
-        
     }
 }
 
@@ -61,11 +34,11 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    setProfile: profile => {
-      dispatch(setProfile(profile))
+    fetchProfile: profile => {
+      dispatch(fetchProfile())
     },
-    setTweets: tweets => {
-      dispatch(setTweets(tweets))
+    fetchTweets: tweets => {
+      dispatch(fetchTweets())
     }
 })
 
