@@ -32,7 +32,7 @@ class UserPresentation extends Component{
               rightIcon={{name: 'magnifier', color: 'white', size: 22, type: 'simple-line-icon'}}
               rightIconOnPress={() => this.showSearch()}
             >
-                <ScrollView style={{backgroundColor:"white"}}>
+                <ScrollView style={{backgroundColor:"#FAFAFA"}}>
                     {
                         this.props.tweetsReady ? 
                             <UserData/> 
