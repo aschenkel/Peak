@@ -28,6 +28,8 @@ class TimeLinePres extends Component{
         <TwitCard 
             id={item.id}
             text={item.text}
+            dumbest={index===0?true:false}
+            smartest={index===1?true:false}
             grade={this.props.topTweets.grades[index]}
             retweetCount={item.retweet_count}
             favCount={item.favorite_count}

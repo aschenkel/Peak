@@ -48,7 +48,7 @@ class Home extends Component{
             var data = JSON.parse(response)
             this.props.setTweets(data)
         };    
-        twitter.getUserTimeline({ user_id: ""+this.props.userID, count: '10',include_rts:'false'}, error, success)
+        twitter.getUserTimeline({ user_id: ""+this.props.userID, count: '30',include_rts:'false'}, error, success)
         
     }
 }

@@ -25,8 +25,9 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
                             blurAmount={1}
                         />
                         <Text>{this.props.error}</Text>
-                        <View style={{flex:5, marginTop:130 }}>
-                            <Text style={{textShadowOffset:{width: 2, height: 1},textShadowColor:"black", fontStyle:"italic", fontSize:32,color:"white", backgroundColor:"transparent"}}>How smart are your tweets?</Text>
+                        <View style={{flex:5, marginTop:100 }}>
+                            <Text style={{textShadowOffset:{width: 5, height: 5},textShadowColor:"black", fontStyle:"italic", fontSize:28,color:"white", backgroundColor:"transparent"}}>What school grade  </Text>
+                            <Text style={{textShadowOffset:{width: 5, height: 5},textShadowColor:"black", fontStyle:"italic", fontSize:28,color:"white", backgroundColor:"transparent"}}>       level are your tweets?</Text>
                         </View>
                     
                             <View style={{flex:3}}>
@@ -34,6 +35,7 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
                                     title='Sign in with Twitter'
                                     button
                                     raised
+                                    fontSize
                                     style={{width:200}}
                                     type='twitter'
                                     onPress={()=>this.SignIn()}
