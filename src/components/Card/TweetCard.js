@@ -7,8 +7,9 @@ import {
 import { Card} from 'react-native-card-view';
 import { Icon } from 'react-native-elements'
 import GradeSufix from './GradeSuffix'
+import TweetBadge from './TweetBadge'
 
-const TwitCard = (props)=>{
+const TweetCard = (props)=>{
     
         return (
                 <Card>
@@ -18,29 +19,7 @@ const TwitCard = (props)=>{
                                 <Text style={styles.name}>{props.name}</Text>
                                 <Text style={styles.screen_name}>@{props.screen_name}</Text>
                             </View>
-                            {
-                                props.smartest ? 
-                                <View style={styles.badgeContainer}>
-                                    <Icon name='seal'
-                                        type='material-community'
-                                        color='blue'
-                                        />
-                                    <Text style={styles.smartestText}>smartest</Text>
-
-
-                                </View>
-                                   : null
-                            }
-                            {
-                            props.dumbest ? 
-                                <View style={styles.badgeContainer}>
-                                    <Icon name='seal'
-                                        type='material-community'
-                                        color='red'
-                                    />
-                                    <Text style={styles.dumbestText}>unsmartest</Text>
-                                </View> : null
-                            }
+                        <TweetBadge smartest={props.smartest} dumbest={props.dumbest}/>
                         </View>
                         <View style={styles.textContainer}>
                             <Text>{props.text}</Text>
@@ -129,4 +108,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default TwitCard
+export default TweetCard
