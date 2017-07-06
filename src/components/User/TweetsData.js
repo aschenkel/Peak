@@ -3,8 +3,7 @@ import TabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
 import Timeline from '../TimeLine/TimeLine'
 import Stats from '../Stats/Stats'
 
-
-const UserDataPres = () =>{
+const TweetsData = () =>{
          return(
                  <TabView tabBarTextStyle={{fontWeight:'bold'}} tabBarBackgroundColor = "white"renderTabBar={() => <DefaultTabBar />}>
                     <Stats tabLabel='Stats'/>
@@ -13,4 +12,4 @@ const UserDataPres = () =>{
         )
 }
 
-export default UserDataPres
+export default TweetsData

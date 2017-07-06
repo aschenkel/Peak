@@ -24,13 +24,11 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
                             blurType="dark"
                             blurAmount={1}
                         />
-                        <Text>{this.props.error}</Text>
                         <View style={{flex:5, marginTop:100 }}>
-                            <Text style={{textShadowOffset:{width: 5, height: 5},textShadowColor:"black", fontStyle:"italic", fontSize:28,color:"white", backgroundColor:"transparent"}}>What school grade  </Text>
-                            <Text style={{textShadowOffset:{width: 5, height: 5},textShadowColor:"black", fontStyle:"italic", fontSize:28,color:"white", backgroundColor:"transparent"}}>       level are your tweets?</Text>
+                            <Text style={styles.text}>What school grade  </Text>
+                            <Text style={styles.text}>       level are your tweets?</Text>
                         </View>
-                    
-                            <View style={{flex:3}}>
+                        <View style={{flex:3}}>
                                 <SocialIcon
                                     title='Sign in with Twitter'
                                     button
@@ -39,8 +37,8 @@ import FabricTwitterKit from 'react-native-fabric-twitterkit'
                                     style={{width:200}}
                                     type='twitter'
                                     onPress={()=>this.SignIn()}
-                                />
-                            </View>
+                        />
+                        </View>
                     </View>);
         }
 
@@ -67,6 +65,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text:{
+    textShadowOffset:{
+            width: 5,
+            height: 5
+         },
+    textShadowColor:"black",
+    fontStyle:"italic", 
+    fontSize:28,color:"white", 
+    backgroundColor:"transparent"
   },
   absolute: {
     position: "absolute",

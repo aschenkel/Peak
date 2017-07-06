@@ -8,7 +8,7 @@ import {
   AsyncStorage,
   ScrollView
 } from 'react-native';
-import UserData from './UserDataPres'
+import TweetsData from './TweetsData'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import ParallaxScrollView from 'react-native-parallax-scrollview';
 import Loader from '../Loaders/Loader'
@@ -35,7 +35,7 @@ class UserPresentation extends Component{
                 <ScrollView style={{backgroundColor:"#FAFAFA"}}>
                     {
                         this.props.tweetsReady ? 
-                            <UserData/> 
+                            <TweetsData/> 
                             :
                             <Loader/>
                     }
@@ -43,6 +43,7 @@ class UserPresentation extends Component{
              </ParallaxScrollView>
         )
     }
+
     showConfirmationMessage(){
         Alert.alert(
             'Hey!',
@@ -52,8 +53,7 @@ class UserPresentation extends Component{
                 {text: 'OK', onPress: () =>    
                       {
                         //DO IT ON MIDDLEWARE
-                        FabricTwitterKit.logOut()
-                        //NO FUNCIONA CORRECTAMENTE PONER ISSUE
+                        FabricTwitterKit.logOut() //Doesnt work. Issue: https://github.com/tkporter/react-native-fabric-twitterkit/issues/33
                         AsyncStorage.removeItem('session')
                         this.props.logOut()
                     }
@@ -67,7 +67,9 @@ class UserPresentation extends Component{
         Alert.alert(
             'Sorry!',
             'Search not implemented yet',
-            { cancelable: true }
+            { 
+                cancelable: true
+            }
             )
      
     }

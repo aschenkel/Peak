@@ -9,6 +9,7 @@ import { Icon } from 'react-native-elements'
 import GradeSufix from './GradeSuffix'
 import TweetBadge from './TweetBadge'
 import UserNames from './UserNames'
+import StatsInfo from './StatsInfo'
 
 const TweetCard = (props)=>{
     
@@ -22,26 +23,10 @@ const TweetCard = (props)=>{
                         <View style={styles.textContainer}>
                             <Text>{props.text}</Text>
                         </View>
-                        <View style={styles.statsContainer}>
-                                 <Icon name='heart-outline'
-                                    type='material-community'
-                                    color='grey'
-                                  />
-                                 <Text style={styles.favsNretweetsContainer}>{props.favCount}</Text>
-                            <View style={styles.retweetCount}>
-                                 <Icon name='twitter-retweet'
-                                    type='material-community'
-                                    color='grey'
-                                  />
-                                 <Text style={styles.favsNretweetsContainer}>{props.retweetCount}</Text>
-                            </View>
-                            <View style={styles.gradeContainer}>
-                                 <Text style={styles.gradeText}>
-                                     {props.grade}{<GradeSufix grade={props.grade} customsStyle={styles.gradeText}/>} grade
-                                </Text>
-                            </View>
-                            
-                        </View>
+                        <StatsInfo grade={props.grade} 
+                            retweetCount={props.retweetCount} 
+                            favCount={props.favCount}
+                        />
                     </View>
                 </Card>               
         )
@@ -59,29 +44,6 @@ const styles = StyleSheet.create({
     textContainer:{
        alignItems:'flex-start',
        marginTop:4
-    },
-    statsContainer:{
-        flex:1,
-        marginTop:15,
-        flexDirection:'row',
-        justifyContent:'center'
-    },
-    retweetCount:{
-        marginLeft:48,
-        flexDirection:'row'
-    },
-    favsNretweetsContainer:{
-        marginLeft:8,
-        fontSize:16,
-        color:'grey'
-    },
-    gradeContainer:{
-        marginLeft:95
-    },
-    gradeText:{
-        fontWeight:'bold',
-        color:"gold",
-        fontSize:20
     }
 });
 
