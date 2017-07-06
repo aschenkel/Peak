@@ -8,18 +8,16 @@ import { Card} from 'react-native-card-view';
 import { Icon } from 'react-native-elements'
 import GradeSufix from './GradeSuffix'
 import TweetBadge from './TweetBadge'
+import UserNames from './UserNames'
 
 const TweetCard = (props)=>{
     
         return (
                 <Card>
                     <View style={styles.cardContainer}>
-                        <View style={styles.userContainer}>
-                            <View style={styles.userNamesContainer}>
-                                <Text style={styles.name}>{props.name}</Text>
-                                <Text style={styles.screen_name}>@{props.screen_name}</Text>
-                            </View>
-                        <TweetBadge smartest={props.smartest} dumbest={props.dumbest}/>
+                        <View style={styles.topContainer}>
+                            <UserNames name={props.name} screen_name={props.screen_name}/>
+                            <TweetBadge smartest={props.smartest} dumbest={props.dumbest}/>
                         </View>
                         <View style={styles.textContainer}>
                             <Text>{props.text}</Text>
@@ -50,34 +48,13 @@ const TweetCard = (props)=>{
 }
 
 const styles = StyleSheet.create({
-    name:{
-        fontWeight:'bold'
-    },
-    screen_name:{
-        marginLeft:4,
-        color:'grey'
+    topContainer:{
+        flexDirection:'row',
+        flex:1
     },
     cardContainer:{
         flex:1,
         margin: 8
-    },
-    userContainer:{
-        flexDirection:'row',
-        flex:1
-    },
-    userNamesContainer:{
-        flexDirection:'row',
-        flex:2
-    },
-    badgeContainer:{
-        flexDirection:'row',
-        alignItems:'center'
-    },
-    dumbestText:{
-        fontSize:9,color:'red'
-    },
-    smartestText:{
-        fontSize:9,color:'blue'
     },
     textContainer:{
        alignItems:'flex-start',
