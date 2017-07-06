@@ -6,11 +6,13 @@ export const avg = grades => {
        return sum /grades.length
 }
 
-export const getTopTweets = grades => {
-        return{
-                dumbest: indexOfSmartest(grades),
-                smartest: indexOfDumbest(grades)
-        }        
+export const getTopTweets = tweets => {
+        var dumbestIndex = indexOfSmartest(tweets.grades)
+        var smartestIndex = indexOfDumbest(tweets.grades)
+        return {
+            tweets:[tweets.tweets[smartestIndex],tweets.tweets[dumbestIndex]],
+            grades:[tweets.grades[smartestIndex],tweets.grades[dumbestIndex]]
+        }
 }
 
 const indexOfSmartest = (arr) => {

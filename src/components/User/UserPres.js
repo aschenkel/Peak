@@ -21,7 +21,7 @@ class UserPresentation extends Component{
         return (
              <ParallaxScrollView
               windowHeight={windowHeight}
-              backgroundSource={{uri:'https://pbs.twimg.com/media/CaQM3waVAAAoLz6.jpg'}}
+              backgroundSource={require('../../../img/twitterColor.jpg')}
               navBarTitle="Beak"
               navBarColor="black"
               userName={this.props.name}
