@@ -6,7 +6,7 @@ import Stats from '../Stats/Stats'
 const TweetsData = () =>{
          return(
                  <TabView tabBarTextStyle={{fontWeight:'bold'}} tabBarBackgroundColor = "white"renderTabBar={() => <DefaultTabBar />}>
-                    <Stats tabLabel='Stats'/>
+                    <Stats tabLabel='Home'/>
                     <Timeline tabLabel='Timeline'/>
                  </TabView>
         )
