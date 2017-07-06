@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import {logOut} from '../../store/actions/index'
+import {logOut} from '../../store/actions/user'
 import {getfixedURL} from '../../store/selectors/image'
 import UserPresentation from './UserPres'
 

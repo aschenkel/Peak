@@ -4,7 +4,7 @@ import Loader from './components/Loaders/Loader'
 import Home from './components/Home'
 import LogIn from './components/LogIn/LogIn'
 import { connect } from 'react-redux'
-import {loadUser} from './store/actions/index'
+import {loadUser} from './store/actions/user'
 
 class App extends Component {
     componentDidMount() {

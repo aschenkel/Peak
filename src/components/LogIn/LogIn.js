@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import {signIn} from '../../store/actions/index'
+import {signIn} from '../../store/actions/user'
 import LogInPresentation from './LogInPres'
 
 

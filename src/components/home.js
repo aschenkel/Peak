@@ -7,8 +7,8 @@ import Loader from './Loaders/Loader'
 import User from './User/User';
 import { connect } from 'react-redux'
 import {getfixedURL} from '../store/selectors/image'
-import {fetchProfile,fetchTweets} from '../store/actions/index'
-
+import {fetchTweets} from '../store/actions/tweets'
+import {fetchProfile} from '../store/actions/user'
 
 class Home extends Component{
     componentDidMount() {      

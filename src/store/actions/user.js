@@ -1,8 +1,6 @@
 import * as actionTypes from './actionTypes'
 import FabricTwitterKit from 'react-native-fabric-twitterkit'
 import { AsyncStorage } from 'react-native';
-var Twitter = require('twitter-node-client').Twitter;
-var config = require('../../../twitter_config.json');
 
 export const setUser = (session) => ({
     type: actionTypes.SET_USER,
@@ -41,20 +39,6 @@ export const loadUser = () => {
     };
 }
 
-export const fetchTweets = () => {
-    return function (dispatch,getState) {
-        var twitter = new Twitter(config);
-        var error = (err, response, body) =>{
-            //dispatch error
-        };
-        var success =  response => {
-            var data = JSON.parse(response)
-            dispatch(setTweets(data))
-        };    
-        twitter.getUserTimeline({ user_id: ""+ getState().user.userID, count: '30',include_rts:'false'}, error, success)
-    };
-}
-
 export const logOut = () => {
     return function (dispatch,getState) {
         FabricTwitterKit.logOut() //Doesnt work. Issue: https://github.com/tkporter/react-native-fabric-twitterkit/issues/33
@@ -82,11 +66,6 @@ export const setProfile = (profile) => ({
 
 export const logOutAction = () => ({
     type: actionTypes.LOG_OUT,
-})
-
-export const setTweets = (tweets) => ({
-    type: actionTypes.SET_TWEETS,
-    tweets: tweets,
 })
 
 export const errorLoadingUser = () => ({
