@@ -5,10 +5,9 @@ import { Provider } from 'react-redux'
 import reducers from './store/reducers/index'
 import App from './app'
 import { composeWithDevTools } from 'remote-redux-devtools';
+import Reactotron from 'reactotron-react-native'
 
-
-const store = createStore(reducers,composeWithDevTools(
-  applyMiddleware(thunk)))
+const store = Reactotron.createStore(reducers,applyMiddleware(thunk))
 
 const Beak = ()=>
 (

@@ -17,7 +17,7 @@ const GradeInfo = (props)=>{
 
 const styles = StyleSheet.create({
     gradeContainer:{
-        marginLeft:95
+        marginLeft:80
     },
     gradeText:{
         fontWeight:'bold',
