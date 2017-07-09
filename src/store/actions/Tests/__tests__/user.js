@@ -2,7 +2,7 @@ import {logOutAction,signIn, setUser,errorLoadingUser,fetchProfile,setProfile,lo
 import * as actionTypes from '../../actionTypes'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import MockStorage from '../mocks/MockStorage';
+//import MockStorage from '../mocks/MockStorage';
 
 const middlewares = [thunk] // add your middlewares like `redux-thunk`
 const mockStore = configureStore(middlewares)
@@ -12,12 +12,12 @@ beforeEach(() => {
 });
 
 it('SignIn (success): should call setUser', () => {
-  var res= {userName:"test"}
-  var mockApi = {
-    login(callback) {
-          callback(null, res)
-      }
-  }
+    var res= {userName:"test"}
+    var mockApi = {
+      login(callback) {
+            callback(null, res)
+        }
+    }
     store.dispatch(signIn(mockApi))
     const actions = store.getActions()
     expect(actions[0]).toEqual(setUser(res))

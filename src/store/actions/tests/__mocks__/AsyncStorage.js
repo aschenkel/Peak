@@ -1,4 +1,4 @@
-export default class MockStorage {
+export default class AsyncStorage {
   constructor(cache = {}) {
     this.storageCache = cache;
   }
@@ -11,13 +11,13 @@ export default class MockStorage {
     });
   });
 
-  getItem = (key) => {
+  getItem = jest.fn((key) => {
     return new Promise((resolve) => {
       return this.storageCache.hasOwnProperty(key)
         ? resolve(this.storageCache[key])
         : resolve(null);
     });
-  };
+  });
 
   removeItem = jest.fn((key) => {
     return new Promise((resolve, reject) => {
