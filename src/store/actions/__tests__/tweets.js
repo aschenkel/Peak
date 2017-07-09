@@ -1,5 +1,5 @@
-import {setTweets,fetchTweets} from '../../tweets'
-import * as actionTypes from '../../actionTypes'
+import {setTweets,fetchTweets} from '../tweets'
+import * as actionTypes from '../actionTypes'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 //import MockStorage from '../mocks/MockStorage';

@@ -1,5 +1,5 @@
-import {logOutAction,signIn, setUser,errorLoadingUser,fetchProfile,setProfile,loadUser,initCompleted} from '../../user'
-import * as actionTypes from '../../actionTypes'
+import {logOutAction,signIn, setUser,errorLoadingUser,fetchProfile,setProfile,loadUser,initCompleted} from '../user'
+import * as actionTypes from '../actionTypes'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 //import MockStorage from '../mocks/MockStorage';
