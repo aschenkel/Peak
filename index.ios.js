@@ -10,3 +10,5 @@ import Beak from './src/index'
 
 
 AppRegistry.registerComponent('Beak', () => Beak);
+
+export default Beak

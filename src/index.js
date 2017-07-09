@@ -7,7 +7,7 @@ import App from './app'
 import { composeWithDevTools } from 'remote-redux-devtools';
 import Reactotron from 'reactotron-react-native'
 
-const store = Reactotron.createStore(reducers,applyMiddleware(thunk))
+const store = createStore(reducers,applyMiddleware(thunk))
 
 const Beak = ()=>
 (

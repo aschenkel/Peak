@@ -3,6 +3,7 @@ import { reactotronRedux } from 'reactotron-redux'
 
 Reactotron
   .configure() // controls connection & communication settings
-  .useReactNative() // add all built-in react native plugins
-  .use(reactotronRedux()) //  <- here i am!
+  .useReactNative({
+    errors: false,
+}) // add all built-in react native plugins
   .connect() // let's connect!

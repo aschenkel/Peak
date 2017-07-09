@@ -12,9 +12,9 @@ export const setUser = (session) => ({
     error:false
 })
 
-export const signIn = () => {
+export const signIn = (api = FabricTwitterKit) => {
     return function (dispatch) {
-        return FabricTwitterKit.login((error, res) => 
+        return api.login((error, res) => 
         {
             if(res !== undefined){
                 if(res.userName){
@@ -47,9 +47,9 @@ export const logOut = () => {
     };
 }
 
-export const fetchProfile= () => {
+export const fetchProfile= (api = FabricTwitterKit) => {
     return function (dispatch) {
-        FabricTwitterKit.fetchProfile((error, profile) => 
+        api.fetchProfile((error, profile) => 
             {
                 if(profile !== undefined){
                     dispatch(setProfile(profile))
