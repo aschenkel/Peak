@@ -3,7 +3,6 @@ Toy app created within a week which uses [SMOG](https://en.wikipedia.org/wiki/SM
 ### [Demo](https://youtu.be/jHoGybJSTGw)
 
 #### TODO
-- Add tests
 - Add search functionality
 
 #### Expo version -> https://github.com/brentvatne/Peak
