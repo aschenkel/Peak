@@ -10,7 +10,7 @@ const gradeTweet= text => {
         return grader.grade(text)  
 }
 
-const tweets = (state = [], action) => {
+export const tweets = (state = [], action) => {
   switch (action.type) {
     case actionTypes.SET_TWEETS:
       return {

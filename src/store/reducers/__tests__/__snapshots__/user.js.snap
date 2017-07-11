@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetProfile: should update state setting user profile 1`] = `
+Object {
+  "authToken": "",
+  "authTokenSecret": "",
+  "authorized": false,
+  "error": false,
+  "imageURL": undefined,
+  "init": false,
+  "name": undefined,
+  "tweets": Array [],
+  "userID": "",
+  "userName": "",
+}
+`;
+
+exports[`SetUser: should update state setting new user 1`] = `
+Object {
+  "authToken": 0,
+  "authTokenSecret": 0,
+  "authorized": true,
+  "error": false,
+  "imageURL": "",
+  "init": false,
+  "name": "",
+  "tweets": Array [],
+  "userID": 0,
+  "userName": "test",
+}
+`;

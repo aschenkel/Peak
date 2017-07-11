@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetTweets: should update state setting users tweets 1`] = `
+Object {
+  "authToken": "",
+  "authTokenSecret": "",
+  "authorized": false,
+  "error": false,
+  "grades": Array [
+    2,
+    4,
+    2,
+  ],
+  "imageURL": null,
+  "init": false,
+  "name": "",
+  "tweets": Array [
+    Object {
+      "text": "this is a tweet",
+    },
+    Object {
+      "text": "just another tweet",
+    },
+    Object {
+      "text": "a third one, yep",
+    },
+  ],
+  "tweetsReady": true,
+  "userID": "",
+  "userName": "",
+}
+`;

@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes'
 import * as grader from '../../utils/grader'
 
-var initialState = {
+export const initialState = {
     init:false,
     authorized: false,
     userName: '',
@@ -14,7 +14,7 @@ var initialState = {
     imageURL:null,
 }
 
-const user = (state = initialState, action) => {
+export const user = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.INIT_COMPLETED:
       return {

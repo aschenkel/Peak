@@ -49,9 +49,9 @@ it('FetchProfile: should call setProfile', () => {
     expect(actions[0]).toEqual(setProfile(profile))
 })
 
-
-
 /* -------- MOCKSTORAGE NOT WORKING ---------------
+
+
 it('LoadUser (exists): should call setUser', () => {
   var mySession={
       type: actionTypes.SET_USER,
@@ -64,11 +64,12 @@ it('LoadUser (exists): should call setUser', () => {
   }
   const storageCache = {session: JSON.stringify(mySession)}
   const AsyncStorageMock = new MockStorage(storageCache);
-  jest.setMock('AsyncStorage', AsyncStorageMock)
+  AsyncStorage = jest.fn(() => AsyncStorageMock);
   store.dispatch(loadUser())
   const actions = store.getActions()
   expect(actions[0]).toEqual(setUser(mySession))
 })
+
 
 it('LoadUser (doesnt exist): should NOT call setUser', () => {
   const storageCache = {}
