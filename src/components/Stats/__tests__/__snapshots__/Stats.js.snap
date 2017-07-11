@@ -1,0 +1,821 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders user stats 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 16,
+      }
+    }
+  >
+    <View
+      onPress={undefined}
+      style={
+        Array [
+          false,
+          false,
+          false,
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+      underlayColor="white"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={false}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 24,
+            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ],
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+        Average: 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      3
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        th
+      </Text>
+       grade
+    </Text>
+  </View>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "text": "first",
+          "user": Object {
+            "name": "test",
+            "screen_name": "tester",
+          },
+        },
+        Object {
+          "text": "second tweet",
+          "user": Object {
+            "name": "test",
+            "screen_name": "tester",
+          },
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onViewableItemsChanged={undefined}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEnabled={false}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#F5FCFF",
+                "flex": 1,
+                "margin": 5,
+              },
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 2,
+                "shadowColor": "#000000",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0.3,
+                },
+                "shadowOpacity": 0.3,
+                "shadowRadius": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "margin": 8,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 2,
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  test
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "grey",
+                      "marginLeft": 4,
+                    }
+                  }
+                >
+                  @
+                  tester
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  onPress={undefined}
+                  style={
+                    Array [
+                      false,
+                      false,
+                      false,
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      },
+                      undefined,
+                    ]
+                  }
+                  underlayColor="white"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={false}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "red",
+                          "fontSize": 24,
+                        },
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          undefined,
+                        ],
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "red",
+                      "fontSize": 9,
+                    }
+                  }
+                >
+                  unsmartest
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "marginTop": 4,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+              >
+                first
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "marginTop": 15,
+                }
+              }
+            >
+              <View
+                onPress={undefined}
+                style={
+                  Array [
+                    false,
+                    false,
+                    false,
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+                underlayColor="white"
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "grey",
+                        "fontSize": 24,
+                      },
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                      ],
+                      Object {
+                        "fontFamily": "Material Design Icons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "grey",
+                    "fontSize": 16,
+                    "marginLeft": 8,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginLeft": 48,
+                  }
+                }
+              >
+                <View
+                  onPress={undefined}
+                  style={
+                    Array [
+                      false,
+                      false,
+                      false,
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      },
+                      undefined,
+                    ]
+                  }
+                  underlayColor="white"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={false}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "grey",
+                          "fontSize": 24,
+                        },
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          undefined,
+                        ],
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "grey",
+                      "fontSize": 16,
+                      "marginLeft": 8,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginLeft": 80,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "gold",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  2
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={undefined}
+                  >
+                    nd
+                  </Text>
+                   grade
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#F5FCFF",
+                "flex": 1,
+                "margin": 5,
+              },
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 2,
+                "shadowColor": "#000000",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0.3,
+                },
+                "shadowOpacity": 0.3,
+                "shadowRadius": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "margin": 8,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 2,
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  test
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "grey",
+                      "marginLeft": 4,
+                    }
+                  }
+                >
+                  @
+                  tester
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  onPress={undefined}
+                  style={
+                    Array [
+                      false,
+                      false,
+                      false,
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      },
+                      undefined,
+                    ]
+                  }
+                  underlayColor="white"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={false}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "blue",
+                          "fontSize": 24,
+                        },
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          undefined,
+                        ],
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "blue",
+                      "fontSize": 9,
+                    }
+                  }
+                >
+                  smartest
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "marginTop": 4,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+              >
+                second tweet
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "marginTop": 15,
+                }
+              }
+            >
+              <View
+                onPress={undefined}
+                style={
+                  Array [
+                    false,
+                    false,
+                    false,
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+                underlayColor="white"
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "grey",
+                        "fontSize": 24,
+                      },
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                      ],
+                      Object {
+                        "fontFamily": "Material Design Icons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "grey",
+                    "fontSize": 16,
+                    "marginLeft": 8,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginLeft": 48,
+                  }
+                }
+              >
+                <View
+                  onPress={undefined}
+                  style={
+                    Array [
+                      false,
+                      false,
+                      false,
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      },
+                      undefined,
+                    ]
+                  }
+                  underlayColor="white"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={false}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "grey",
+                          "fontSize": 24,
+                        },
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          undefined,
+                        ],
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "grey",
+                      "fontSize": 16,
+                      "marginLeft": 8,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginLeft": 80,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "gold",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  4
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={undefined}
+                  >
+                    th
+                  </Text>
+                   grade
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

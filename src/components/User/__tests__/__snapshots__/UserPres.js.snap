@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders user presentation when tweets are NOT ready 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderColor": "transparent",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "backgroundColor": "#2e2f31",
+        "height": 667,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "transform": Array [
+          Object {
+            "translateY": 0,
+          },
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 750,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "flexDirection": "row",
+        "height": 65,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ],
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 22,
+              },
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ],
+              Object {
+                "fontFamily": "simple-line-icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flex": 5,
+          "justifyContent": "center",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "fontWeight": "600",
+            }
+          }
+        >
+          Peak
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ],
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 22,
+              },
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ],
+              Object {
+                "fontFamily": "simple-line-icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    backgroundSource={1}
+    leftIcon={
+      Object {
+        "color": "white",
+        "name": "logout",
+        "size": 22,
+        "type": "simple-line-icon",
+      }
+    }
+    leftIconOnPress={[Function]}
+    navBarColor="black"
+    navBarTitle="Peak"
+    onScroll={[Function]}
+    rightIcon={
+      Object {
+        "color": "white",
+        "name": "magnifier",
+        "size": 22,
+        "type": "simple-line-icon",
+      }
+    }
+    rightIconOnPress={[Function]}
+    scrollEventThrottle={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    userImage={undefined}
+    userName={undefined}
+    userTitle="@undefined"
+    windowHeight={667}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 602,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "http://i.imgur.com/uma9OfG.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 60,
+                    "height": 120,
+                    "width": 120,
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 22,
+                    "paddingBottom": 5,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Katy Friedson
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(247,247, 250, 1)",
+                    "fontSize": 17,
+                    "paddingBottom": 5,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                @undefined
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#fff",
+              "flex": 1,
+              "flexDirection": "column",
+              "shadowColor": "#222",
+              "shadowOpacity": 0.3,
+              "shadowRadius": 2,
+            },
+            undefined,
+          ]
+        }
+      >
+        <RCTScrollView
+          style={
+            Object {
+              "backgroundColor": "#FAFAFA",
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FAFAFA",
+                  "flex": 1,
+                  "height": undefined,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <RNSpinkit
+                color={4294967295}
+                size={300}
+                style={
+                  Array [
+                    Object {
+                      "height": 300,
+                      "width": 300,
+                    },
+                    undefined,
+                  ]
+                }
+                type="Pulse"
+              />
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

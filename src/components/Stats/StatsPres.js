@@ -37,7 +37,6 @@ class TimeLinePres extends Component{
             favCount={item.favorite_count}
             name={item.user.name}
             screen_name={item.user.screen_name}
-            created_at={item.created_at}
         />
   );
 
