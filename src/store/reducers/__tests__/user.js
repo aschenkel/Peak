@@ -35,16 +35,12 @@ it('LogOut: should update state to initialState with init to true', () => {
         userName: "@tester",
     }
     const newState = user(previousState, logOutAction());
-    expect(newState).toEqual({
-        ...initialState,
-        init:true
-     });
+    expect(newState).toMatchSnapshot();
+
 });
 
 it('InitCompleted: should update state setting init to true', () => {
   const newState = user(initialState, initCompleted());
-  expect(newState).toEqual({
-        ...initialState,
-        init:true
-  });
+  expect(newState).toMatchSnapshot();
+
 });

@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`InitCompleted: should update state setting init to true 1`] = `
+Object {
+  "authToken": "",
+  "authTokenSecret": "",
+  "authorized": false,
+  "error": false,
+  "imageURL": null,
+  "init": true,
+  "name": "",
+  "tweets": Array [],
+  "userID": "",
+  "userName": "",
+}
+`;
+
+exports[`LogOut: should update state to initialState with init to true 1`] = `
+Object {
+  "authToken": "",
+  "authTokenSecret": "",
+  "authorized": false,
+  "error": false,
+  "imageURL": null,
+  "init": true,
+  "name": "",
+  "tweets": Array [],
+  "userID": "",
+  "userName": "",
+}
+`;
+
 exports[`SetProfile: should update state setting user profile 1`] = `
 Object {
   "authToken": "",
