@@ -9,3 +9,6 @@ Toy app created within a week which uses [SMOG](https://en.wikipedia.org/wiki/SM
 
 *Inspired by* [*going from nothing to product hunt in 4 hours*](https://medium.com/@johnnylin/going-from-nothing-to-product-hunt-in-4-hours-89cfb67977b3)
 
+
+**DISCLAIMER**: done when first started playing with react-native a while back.
+
